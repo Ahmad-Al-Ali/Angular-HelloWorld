@@ -27,5 +27,5 @@ steps:
     azureSubscription: 'Ahmad Alali (ffb954f7-9a15-4100-aed2-c545224b241f)'
     appType: 'webAppLinux'
     WebAppName: 'ah-angular-demo'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: 'Dist/'
     RuntimeStack: 'NODE|10.1'
