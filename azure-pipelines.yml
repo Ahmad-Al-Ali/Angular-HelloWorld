@@ -31,6 +31,7 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
+    azureSubscription: 'Ahmad Alali (ffb954f7-9a15-4100-aed2-c545224b241f)'
     appType: 'webAppLinux'
     WebAppName: 'ah-angular-demo'
     packageForLinux: 'dist/'
