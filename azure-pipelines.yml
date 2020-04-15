@@ -21,11 +21,17 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'dist/'
+    
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Ahmad Alali (ffb954f7-9a15-4100-aed2-c545224b241f)'
     appType: 'webAppLinux'
     WebAppName: 'ah-angular-demo'
-    packageForLinux: 'Dist/'
+    packageForLinux: 'dist/'
     RuntimeStack: 'NODE|10.1'
