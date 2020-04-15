@@ -27,11 +27,12 @@ steps:
     command: 'install'
     workingDir: 'dist/'
     
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'AzureRM'
-        appType: 'webAppLinux'
-        WebAppName: 'ah-angular-demo'
-        packageForLinux: 'dist/'
-        RuntimeStack: 'NODE|10-lts'
-        StartupCommand: 'ng serve -o'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webAppLinux'
+    WebAppName: 'ah-angular-demo'
+    packageForLinux: 'dist/'
+    RuntimeStack: 'NODE|10-lts'
+    StartupCommand: 'ng serve -o'
